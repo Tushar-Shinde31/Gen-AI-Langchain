@@ -1,21 +1,11 @@
-from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
+from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 from typing import TypedDict, Annotated, Optional, Literal
 from pydantic import BaseModel, Field
 
 load_dotenv()
 
-llm = HuggingFaceEndpoint(
-    repo_id="HuggingFaceH4/zephyr-7b-beta",
-    task="text-generation",
-    max_new_tokens=512,
-    temperature=0
-)
-
-
-
-model = ChatHuggingFace(llm=llm)
-
+model = ChatOpenAI()
 
 # schema
 json_schema = {
