@@ -27,4 +27,3 @@ result = chain.invoke({'topic' : 'cricket'})
 print(result)
 
 
-
